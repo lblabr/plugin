@@ -232,8 +232,11 @@ void setup() {
 
     // 3rd party code hook
     #if USE_EXTRA
-        extraSetup();
+//        extraSetup();
     #endif
+
+    plugin_mcp4725b_Setup();
+
 
     // Prepare configuration for version 2.0
     migrate();
