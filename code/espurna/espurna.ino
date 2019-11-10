@@ -18,6 +18,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 */
+#define PLUGIN
+#define USE_CUSTOM_H
 
 #include "config/all.h"
 #include <vector>
@@ -229,14 +231,10 @@ void setup() {
         displaySetup();
     #endif
 
-
     // 3rd party code hook
     #if USE_EXTRA
-//        extraSetup();
+        extraSetup();
     #endif
-
-    plugin_mcp4725b_Setup();
-
 
     // Prepare configuration for version 2.0
     migrate();
